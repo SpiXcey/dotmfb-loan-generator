@@ -823,8 +823,8 @@ async function downloadPDF() {
   /* 2. populate document content */
   populate();
 
-  var borrower = document.getElementById('f-borrower').value.trim() || 'LoanOffer';
-  var filename = 'DOT_LoanOffer_' + borrower.replace(/\s+/g,'_') + '.pdf';
+  var borrower = document.getElementById('f-borrower').value.trim();
+  var filename = 'DOT_LoanAgreement' + (borrower ? '_' + borrower.replace(/\s+/g,'_') : '') + '.pdf';
 
   var btn = document.getElementById('dl-btn');
   btn.textContent = 'Generating PDF...';
